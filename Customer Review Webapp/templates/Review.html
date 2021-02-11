@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Review Page
+        </title>
+        <script type="text/javascript">
+        var ans = '{{var}}'
+        if (ans == 5) {
+            window.alert('Posted Successfully!');
+            ans=0;
+        }
+        </script>
+    </head>
+    <body style=";background-repeat:no-repeat;
+    background-size: cover;">
+        <div style="background-color: rgba(255,255,255,0.8);width:40%;position: absolute;
+        top:50px;bottom: 50px;left: 0;right: 0;
+        margin: auto;padding-top: 40px;text-align: center;border: 1px solid black; border-spacing: 5px; border-radius: 5px;">
+            <span style="font-style: italic;font-size: 30px;text-decoration: underline;">Review Section</span><br><br><br><br>
+            <form action="http://127.0.0.1:5000/RecentReviews" method="POST" >
+                <label for="Customer-name">Customer name:</label><br><br>
+                <input type="text" id="Customer-name" name="Customer-name"><br><br>
+                <label for="Food-Product">Product Name:</label><br><br>
+                <input type="text" id="Food-Product" name="Food-Product"><br><br>
+                <label for="Review">Review:</label><br><br>
+                <textarea name="Review" rows="10" cols="30"></textarea><br><br>
+                <input type="submit" value="Post Review"><br><br>
+                <div id="alert" style="display:none;color:red"> Review Posted successfully!</div>
+            </form>
+
+            <span>To check the recent reviews,<br> Please click<br>
+                <a href="RecentReviews.html"> <button style="background-color: black; color: chartreuse;"> Recent reviews </button> </a>
+            </span>
+
+        </div>
+    </body>
+</html>

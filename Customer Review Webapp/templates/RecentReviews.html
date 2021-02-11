@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Recent Reviews</title>
+    </head>
+    <body style="background-repeat: repeat;">
+        <h1 style="color:white; padding-left:65px;font-size: 70px;">Reviews</h1>
+        {% for row in rows %}
+        <div style="width:75%;background-color:rgba(255,255,255,0.9);border-radius: 10px;margin-left: 65px;padding-left:5px;padding-bottom: 0.05px;padding-top: 0.05px;margin-top: 20px;">
+            <p><b>Customer Name:</b>{{row[0]}}</p>
+            <p><b>Product Name:</b>{{row[1]}}</p>
+            <p><b>Review:</b></p>
+            <p>{{row[2]}}</p>
+        </div>
+        {% endfor %}
+        </div>
+    </body>
+</html>
